@@ -18,12 +18,13 @@ And so I used **Claude Sonnet 4, Agent mode**. This code repository houses the c
 
 The main consideration behind choosing HTML, CSS and Vanilla JS was the ease of setting the local application up for people with non-programming background (as opposed to the use of docker).  
 
-### What I learn + Potential areas Moving Forward
+## What I learn + Moving Forward
 Once again, I was deeply amazed by Claude's power.
 - It is better to prompt the app features one by one instead of all in one shot.
 - Human intervenetion is still helpful as opposed to fully relying on prompting for the AI to rectify itself.
 - There are still some bugs with the UI design -- the alignment and responsive design isn't the most ideal (not yet solved)
-- Moving forward: To read and internalise the code. The danger of vibe coding is to code without fully understanding what the code does.   
+- To read and internalise the code. It may seem to work, but The danger of vibe coding is to code without fully understanding what the code does. 
+- Code quality: Writing almost all the code in a _single_ file does not seem to be the best idea. (Readability and Modularity issue)
 
 
 ## Installation and Usage
