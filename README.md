@@ -1,16 +1,72 @@
-# Square Board Creator
+# Square Board Creator (Vibe coding)
 
-A web-based application that allows users to create and manipulate square boards with merge and subdivide functionality.
+A local application that allows users to create and manipulate square boards with merge and subdivide functionality. <br>
+
+
+## Important!: Why this exists
+I was creating sqaureboard diagrams for a particular use case. I shared an online platform that I used to help me to do so, which was essentially just a virtual tool for users to draw lines on graph paper. I was asked: <br>
+
+
+> "Can this online platform create squareboard diagrams automatically?" <br>
+> Me: "Err no. It's not that advance?" <br>
+
+However, that conversation led me to think: if there truly isn't any existing tools out there, **why not create one?**<br>
+
+With the advance of Generative AI, I thought it will be a good opportunitity to explore the capabilities of Generative AI and gain first-hand experience how powerful Gen AI is. <br>
+
+And so I used **Claude Sonnet 4, Agent mode**. This code repository houses the code created by Claude, and a bit of my input. 
+
+The main consideration behind choosing HTML, CSS and Vanilla JS was the ease of setting the local application up for people with non-programming background (as opposed to the use of docker).  
+
+### What I learn + Potential areas Moving Forward
+Once again, I was deeply amazed by Claude's power.
+- It is better to prompt the app features one by one instead of all in one shot.
+- Human intervenetion is still helpful as opposed to fully relying on prompting for the AI to rectify itself.
+- There are still some bugs with the UI design -- the alignment and responsive design isn't the most ideal (not yet solved)
+- Moving forward: To read and internalise the code. The danger of vibe coding is to code without fully understanding what the code does.   
+
+
+## Installation and Usage
+
+1. Download all files to a folder
+2. Double-click `index.html` to open in your default browser
+3. Done. No installation or setup required!
+
+## Sharing
+
+To share this app:
+1. Zip all the files together
+2. Send the zip file to the receiver
+3. The receiver extracts the files and opens `index.html`
+4. The app runs locally on their computer!
+
+## Technical Details
+
+- **HTML5**: Structure and layout
+- **CSS3**: Styling with responsive design
+- **Vanilla JavaScript**: All functionality implemented without external libraries
+- **No Dependencies**: Runs entirely in the browser without any server or external resources
+
+## File Structure
+
+```
+Square Board Creator/
+├── index.html          # Main HTML file
+├── style.css           # CSS styles
+├── script.js           # JavaScript functionality
+└── README.md           # Documentation
+```
+
 
 ## Features
 
 - **Square Board Generation**: Create square boards of any size (NxN grid)
 - **Square Validation**: Ensures only square boards can be created (equal rows and columns)
 - **Square Selection**: Click to select/deselect individual squares
-- **Subdivide Function**: Split selected squares into smaller perfect squares (2x2, 3x3, 4x4, 5x5)
+- **Subdivide Function**: Split selected squares into smaller perfect squares (e.g. 2x2, 3x3, 4x4, 5x5)
 - **Merge Function**: Combine multiple selected squares into a larger square. You can select multiple squares at once (as opposed to selecting individually) by pressing and holding any 1 square, and dragging your cursor to select the rest.
 - **Real-time Validation**: Error messages for invalid operations
-- **Responsive Design**: Works on different screen sizes
+- **Responsive Design**: Works on different screen sizes **(partially implemented)**
 
 ## How to Use
 
@@ -45,65 +101,3 @@ A web-based application that allows users to create and manipulate square boards
 - **Equal Size for Merging**: You can only merge squares of the same size
 - **Contiguous Merging**: Merged squares must be adjacent and form a square grid
 - **Perfect Square Subdivision**: Squares can only be subdivided into perfect square numbers (4, 9, 16, 25, etc.)
-
-## Technical Details
-
-- **HTML5**: Structure and layout
-- **CSS3**: Styling with responsive design
-- **Vanilla JavaScript**: All functionality implemented without external libraries
-- **No Dependencies**: Runs entirely in the browser without any server or external resources
-
-## File Structure
-
-```
-Square Board Creator/
-├── index.html          # Main HTML file
-├── style.css           # CSS styles
-├── script.js           # JavaScript functionality
-└── README.md           # Documentation
-```
-
-## Browser Compatibility
-
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
-- Any modern browser with JavaScript enabled
-
-## Installation and Usage
-
-1. Download all files to a folder
-2. Double-click `index.html` to open in your default browser
-3. No installation or setup required!
-
-## Sharing
-
-To share this app:
-1. Zip all the files together
-2. Send the zip file to the receiver
-3. The receiver extracts the files and opens `index.html`
-4. The app runs locally on their computer!
-
-## Error Messages
-
-- **"Rows and columns must be equal to create a square board!"**: Enter the same number for rows and columns
-- **"Please select exactly one square to subdivide"**: Select only one square before subdividing
-- **"Please select at least 2 squares to merge"**: Select multiple squares before merging
-- **"Selected squares cannot be merged"**: The selected squares don't form a perfect square shape
-
-## Examples
-
-### Creating a 3x3 Board
-- Enter 3
-- Results in 9 squares arranged in a 3x3 grid
-
-### Subdividing a Square
-- Select one square
-- Key in "2" (2x2) to split it into 4 smaller squares
-
-### Merging Squares
-- Select 4 adjacent squares in a 2x2 formation
-- Click merge to combine them into one larger square
-
-Enjoy creating and manipulating your square boards!
