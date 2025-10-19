@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Board Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Square Board Creator</h1>
+        
+        <!-- Square Counter -->
+        <div id="squareCounter" class="square-counter">
+            Total Squares: <span id="squareCount">0</span>
+        </div>
+        
+        <!-- Combined Controls Section -->
+        <div class="controls-section">
+            <div class="control-group">
+                <h2>Create Board</h2>
+                <div class="input-group">
+                    <label for="boardSize">Board Size:</label>
+                    <input type="number" id="boardSize" min="1" value="5" placeholder="Board size">
+                    <span class="size-hint">x</span>
+                    <span id="boardPreview">5</span>
+                    <span class="size-hint" id="boardSquareCount">board (25 squares)</span>
+                    
+                    <button id="createBoard">Create Square Board</button>
+                    
+                    <div>
+                        <label for="zoomInput" style="margin-left: 20px;">Zoom:</label>
+                        <input type="number" id="zoomInput" min="5" value="100" step="5">
+                        <span class="size-hint">%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="control-group" id="actionsGroup" style="display: none;">
+                <h2>Board Actions</h2>
+                <div class="action-buttons">
+                    <button id="subdivideBtn" disabled>Subdivide</button>
+                    <button id="mergeBtn" disabled>Merge</button>
+                    <button id="clearSelection">Clear Selection</button>
+                </div>
+                
+                
+                <!-- Subdivide Options -->
+                <div id="subdivideOptions" class="action-options" style="display: none;">
+                    <label for="subdivideSize">Subdivide into:</label>
+                    <input type="number" id="subdivideSize" min="2" max="20" value="2" placeholder="Grid size" style="width: 120px;">
+                    <span class="size-hint">x</span>
+                    <span id="subdividePreview">2</span>
+                    <span class="size-hint" id="subdivideSquareCount">grid (4 squares)</span>
+                    <button id="confirmSubdivide">Confirm</button>
+                    <button id="cancelSubdivide">Cancel</button>
+                    <br>
+                    <span class="size-hint" style="margin-top: 1px; display: block;">Only numbers 2-20 is allowed</span>
+                </div>
+                
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message"></div>
+                
+                <!-- Error Message -->
+                <div id="errorMessage" class="error-message"></div>
+            </div>
+        </div>
+
+        <!-- Board Display Section -->
+        <div class="board-section">
+            <div id="board" class="board"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
