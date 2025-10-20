@@ -8,7 +8,7 @@ I was creating sqaureboard diagrams for [a particular use case](#how-to-use). I 
 
 
 > "Can this online platform create squareboard diagrams automatically?" <br>
-> Me: "Err no. It's not that advance?" <br>
+> Me: "Hmm... no. It's not that advance?" <br>
 
 However, that conversation led me to think: if there truly isn't any existing tools out there, **why not create one?**<br>
 
